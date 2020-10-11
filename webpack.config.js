@@ -9,6 +9,23 @@ module.exports = {
   },
   plugins: [
           new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-          new HtmlWebpackPlugin()
-  ]
+          new HtmlWebpackPlugin({ template: 'src/index.html'})
+  ],
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-react']
+        }
+      }
+    }]
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  }
 }
