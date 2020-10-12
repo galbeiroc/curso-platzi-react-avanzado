@@ -44,7 +44,7 @@ paso 2: Config vercel.json para el deploy app y la api
 
 paso 1: Instalar styled-componentnpm  install styled-components   https://styled-components.com/
 
-`const Button = styled.button`
+`const Button = styled.button``
  `border-radius: 4px;`
  `${props => props.accent && `
  `background: red;`
@@ -68,7 +68,7 @@ paso 2: Implementacion de createGlobalStyle
 
 `import { createGlobalStyle } from 'styled-components'`
 
-`export const GlobalStyles = createGlobalStyle`
+`export const GlobalStyles = createGlobalStyle``
   `html {`
     `box-sizing: border-box;`
     `font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;`
