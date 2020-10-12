@@ -77,3 +77,9 @@ paso 2: Implementacion de createGlobalStyle
   `*, *:before, *:after {`
     `box-sizing: inherit;`
   `}`
+
+#### 06 - Creación componente PhotoCard y ListOfPhotoCard
+
+paso 1: Creación componente PhotoCard y estilos con Styled-components
+paso 2: Instalar react-icons npm i react-icons para los icons
+paso 3: Creación componente ListOfPhotoCard y estilos con Styled-components
