@@ -34,3 +34,6 @@ paso 3: create file index.html
 `new HtmlWebpackPlugin({ template: 'src/index.html'})`
 
 paso 2: Instalar npm i @babel/core @babel/preset-env babel-loader @babel/preset-react --save-dev para transpilar código jsx a JavaScript Vanilla
+
+
+03 - Eslint
