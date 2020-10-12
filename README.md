@@ -22,12 +22,10 @@ Paso 6: Añadir un script llamado dev: "dev": "webpack-dev-server".
 #### 02 - React, Babel
 paso 1: Instalar  npm i react react-dom
 
-`
-import React from 'react';
-import ReactDOM from 'react-dom';
+`import React from 'react';`
+`import ReactDOM from 'react-dom';`
 
-ReactDOM.render('Hola galbeiroc', document.body);
-`
+`ReactDOM.render('Hola galbeiroc', document.body);`
 
 paso 3: create file index.html
 
@@ -42,24 +40,40 @@ paso 1: Instalar standard como linter npm install standard
 
 paso 2: Config vercel.json para el deploy app y la api
 
-#### 04 - Styled-component
+#### 04 - Styled-component y creación componente Category
 
 paso 1: Instalar styled-componentnpm  install styled-components   https://styled-components.com/
 
-const Button = styled.button`
-	border-radius: 4px;
-	${props => props.accent && `
-		background: red;
-		color: #fff;
-	`}
+`const Button = styled.button`
+ `border-radius: 4px;`
+ `${props => props.accent && `
+ `background: red;`
+ `color: #fff;`
+ `}`
 
 
-render () {
-	return (
-		
-			Click here!
-		
-	)
-}
+`render () {`
+  `return (`
+    `Click here! `
+  `)`
+`}`
 
 paso 2: Creación del componente Category usando styled-components
+
+#### 05 - Creación componente LitsOFCategories y uso createGlobalStyle
+
+paso 1: Creación componente LitsOFCategories y estilos con Styled-components
+
+paso 2: Implementacion de createGlobalStyle
+
+`import { createGlobalStyle } from 'styled-components'`
+
+`export const GlobalStyles = createGlobalStyle`
+  `html {`
+    `box-sizing: border-box;`
+    `font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;`
+  `}`
+
+  `*, *:before, *:after {`
+    `box-sizing: inherit;`
+  `}`
