@@ -3,7 +3,7 @@
 
 Repositorio con el código del [React de Avanzado]
 
-01 - Webpack
+#### 01 - Webpack
 Paso 1: Instalar webpack y webpack-cli como dependencias de desarrollo con: npm i webpack wepack-cli --save-dev.
 npx webpack src/index.js sustituye a node_modules\.bin\webpack src/index.js
 windows "./node_modules/.bin/webpack" src/index.js
@@ -19,7 +19,7 @@ Paso 5: Instalar webpack-dev-server con: npm i webpack-dev-server --save-dev.
 Paso 6: Añadir un script llamado dev: "dev": "webpack-dev-server".
 
 
-02 - React, Babel
+#### 02 - React, Babel
 paso 1: Instalar  npm i react react-dom
 
 `
@@ -36,4 +36,30 @@ paso 3: create file index.html
 paso 2: Instalar npm i @babel/core @babel/preset-env babel-loader @babel/preset-react --save-dev para transpilar código jsx a JavaScript Vanilla
 
 
-03 - Eslint
+#### 03 - Eslint
+
+paso 1: Instalar standard como linter npm install standard
+
+paso 2: Config vercel.json para el deploy app y la api
+
+#### 04 - Styled-component
+
+paso 1: Instalar styled-componentnpm  install styled-components   https://styled-components.com/
+
+const Button = styled.button`
+	border-radius: 4px;
+	${props => props.accent && `
+		background: red;
+		color: #fff;
+	`}
+
+
+render () {
+	return (
+		
+			Click here!
+		
+	)
+}
+
+paso 2: Creación del componente Category usando styled-components
