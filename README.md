@@ -42,7 +42,7 @@ paso 2: Config vercel.json para el deploy app y la api
 
 #### 04 - Styled-component y creación componente Category
 
-paso 1: Instalar styled-componentnpm  install styled-components   https://styled-components.com/
+paso 1: Instalar styled-componentnpm  install styled-components   *https://styled-components.com/*
 
 `const Button = styled.button``
  `border-radius: 4px;`
@@ -81,5 +81,13 @@ paso 2: Implementacion de createGlobalStyle
 #### 06 - Creación componente PhotoCard y ListOfPhotoCard
 
 paso 1: Creación componente PhotoCard y estilos con Styled-components
-paso 2: Instalar react-icons npm i react-icons para los icons
+paso 2: Instalar react-icons npm i react-icons para los icons  *https://react-icons.github.io/react-icons/*
 paso 3: Creación componente ListOfPhotoCard y estilos con Styled-components
+
+#### 07 - Creación Logo en SVG
+
+paso 1: Crear un svg *https://maketext.io/*
+
+paso 2: Limpiar y comprimir svg *https://jakearchibald.github.io/svgomg/*
+
+paso 3: Crear un svg en component de React *https://react-svgr.com/playground/*
