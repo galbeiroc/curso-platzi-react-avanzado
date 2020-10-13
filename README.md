@@ -93,3 +93,29 @@ paso 2: Limpiar y comprimir svg *https://jakearchibald.github.io/svgomg/*
 paso 3: Crear un svg en component de React *https://react-svgr.com/playground/*
 
 paso 4: Agregar animación al ListOfPhotoCard, usando keyframes de Styled-components
+
+#### 08 - Fijar las categorias
+
+paso 1: Implement useEffect y useState para fijar categorias
+
+`const [showFixed, setShowFixed] = useState(false)`
+
+  `useEffect(() => {`
+
+    `const onScroll = e => {`
+
+      `const newShowFixed = window.scrollY > 190`
+
+      `showFixed !== newShowFixed && setShowFixed(newShowFixed)`
+
+    `}`
+
+    `document.addEventListener('scroll', onScroll)`
+
+    `return () => document.removeEventListener('scroll', onScroll)`
+  `}, [showFixed])`
+  
+  `}`
+
+
+
