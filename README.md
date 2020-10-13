@@ -60,11 +60,11 @@ paso 1: Instalar styled-componentnpm  install styled-components   *https://style
 
 paso 2: Creación del componente Category usando styled-components
 
-#### 05 - Creación componente LitsOFCategories y uso createGlobalStyle
+#### 05 - Creación componente LitsOFCategories y uso createGlobalStyle de Styled-components
 
 paso 1: Creación componente LitsOFCategories y estilos con Styled-components
 
-paso 2: Implementacion de createGlobalStyle
+paso 2: Implementacion de createGlobalStyle en el archivo GlobalStyles
 
 `import { createGlobalStyle } from 'styled-components'`
 
@@ -84,10 +84,12 @@ paso 1: Creación componente PhotoCard y estilos con Styled-components
 paso 2: Instalar react-icons npm i react-icons para los icons  *https://react-icons.github.io/react-icons/*
 paso 3: Creación componente ListOfPhotoCard y estilos con Styled-components
 
-#### 07 - Creación Logo en SVG
+#### 07 - Creación Logo en SVG y Agregar animación
 
 paso 1: Crear un svg *https://maketext.io/*
 
 paso 2: Limpiar y comprimir svg *https://jakearchibald.github.io/svgomg/*
 
 paso 3: Crear un svg en component de React *https://react-svgr.com/playground/*
+
+paso 4: Agregar animación al ListOfPhotoCard, usando keyframes de Styled-components

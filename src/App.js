@@ -3,7 +3,7 @@ import { ListOfCategories } from './components/ListOfCategories'
 import { ListOfPhotoCard } from './components/ListOfPhotoCard'
 import { Logo } from './components/Logo'
 
-import { GlobalStyles } from './GlobalStyles'
+import { GlobalStyles } from './Styles/GlobalStyles'
 
 export const App = () => (
   <div>
