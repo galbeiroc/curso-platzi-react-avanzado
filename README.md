@@ -117,5 +117,7 @@ paso 1: Implement useEffect y useState para fijar categorias
   
   `}`
 
+paso 1: Create custom hook useCategoryData
+
 
 
