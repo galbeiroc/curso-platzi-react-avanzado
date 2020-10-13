@@ -117,7 +117,36 @@ paso 1: Implement useEffect y useState para fijar categorias
   
   `}`
 
-paso 1: Create custom hook useCategoryData
+paso 2: Create custom hook useCategoryData
+
+#### 09 - Uso de Intersection tion Observer y uso de useRef
+
+paso 1: Implementación useRef para tomar la referecia del elemento article
+
+`const element = useRef(null)`
+
+paso 2: Crear observador, para ver todas las entradas de viewport
+
+  `useEffect(() => {
+
+    const observer = new window.IntersectionObserver((entries) => {
+
+      const { isIntersecting } = entries[0]
+
+      if (isIntersecting) {
+
+        setShow(true)
+
+        observer.disconnect()
+
+      }
+
+    })
+
+    observer.observe(element.current)
+
+  }, [element])`
+
 
 
 
