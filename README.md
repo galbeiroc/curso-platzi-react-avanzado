@@ -119,7 +119,7 @@ paso 1: Implement useEffect y useState para fijar categorias
 
 paso 2: Create custom hook useCategoryData
 
-#### 09 - Uso de Intersection tion Observer y uso de useRef
+#### 09 - Uso de Intersection Observer y uso de useRef
 
 paso 1: Implementación useRef para tomar la referecia del elemento article
 
@@ -147,6 +147,28 @@ paso 2: Crear observador, para ver todas las entradas de viewport
 
   }, [element])`
 
+#### 09 - Instalación y uso de polyfill intersection-observer.
+1: Con el fin que otros navegadores soporten intersection observer, al instalar el polyfill lo que hace
+es parchear el objeto window. 
+https://caniuse.com/?search=intersection%20observer
+2. npm install babel-eslint --save-dev, es un parseador de eslint
+
+`useEffect(() => {
+    Promise.resolve(
+      typeof window.IntersectionObserver !== 'undefined'
+        ? window.IntersectionObserver
+        : import('intersection-observer')
+    ).then(() => {
+      const observer = new window.IntersectionObserver((entries) => {
+        const { isIntersecting } = entries[0]
+        if (isIntersecting) {
+          setShow(true)
+          observer.disconnect()
+        }
+      })
+      observer.observe(element.current)
+    })
+  }, [element])`
 
 
 
