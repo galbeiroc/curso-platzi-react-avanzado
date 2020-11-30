@@ -154,21 +154,104 @@ https://caniuse.com/?search=intersection%20observer
 2. npm install babel-eslint --save-dev, es un parseador de eslint
 
 `useEffect(() => {
+
     Promise.resolve(
+
       typeof window.IntersectionObserver !== 'undefined'
+
         ? window.IntersectionObserver
+
         : import('intersection-observer')
+
     ).then(() => {
+
       const observer = new window.IntersectionObserver((entries) => {
+
         const { isIntersecting } = entries[0]
+
         if (isIntersecting) {
+
           setShow(true)
+
           observer.disconnect()
+
         }
+
       })
       observer.observe(element.current)
+
     })
+
   }, [element])`
 
+#### 09 - GraphQL
+###### GraphQL: es un lenguaje de consulta y manipulación de datos para APIs.
+###### Apollo: Es un cliente que nos permite conectarnos a un servidor de GraphQl.
+npm i apollo-boost  => Es un tool que nos permite inicializar nuestra conexión con un server de apollo rapidamente
+npm i react-apollo => Libreria que es la integración  de react con el cliente apollo
 
+###### Config GraphQL
+`index.js`
+`
+import ApolloClient from 'apollo-boost'
+import { ApolloProvider } from 'react-apollo'
 
+  const client = new ApolloClient({
+    uri: 'https://petgram-server-acg-cp4ksptuq.vercel.app/graphql'
+  })
+
+  ReactDOM.render(
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>, document.getElementById('app')
+  )
+`
+`ListOfPhotoCard`
+`
+import { graphql } from 'react-apollo'
+
+import { gql } from 'apollo-boost'
+
+Query:
+
+const withPhotos = graphql(gql`
+
+  query getPhotos {
+
+    photos {
+
+      id,
+
+      categoryId,
+
+      src,
+
+      likes,
+
+      userId,
+
+      liked
+
+    }
+  }
+`)
+
+const ListOfPhotoCardsComponent = ({ data: { photos = [] } }) => {
+
+  return (
+
+    <ul>
+
+      {
+
+        photos.map(photo => <PhotoCard key={photo.id} {...photo} />)
+
+      }
+
+    </ul>
+
+  )
+}
+//HOC
+export const ListOfPhotoCard = withPhotos(ListOfPhotoCardsComponent)
+`
